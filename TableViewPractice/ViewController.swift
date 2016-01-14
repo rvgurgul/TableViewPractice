@@ -8,18 +8,33 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+{
+    @IBOutlet weak var myTableView: UITableView!
+    
+    let myArray = ["Batman", "Superman", "Aquaman", "Iron Man", "The Flash", "Spiderman"]
+    let otherArray = ["Bruce Wayne", "Clark Kent", "Arthur Curry", "Tony Stark", "Barry Allen", "Peter Parker"]
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        myTableView.dataSource = self
+        myTableView.delegate = self
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let myCell = myTableView.dequeueReusableCellWithIdentifier("cell1", forIndexPath: indexPath)
+        myCell.textLabel!.text = myArray[indexPath.row]
+        myCell.detailTextLabel!.text = otherArray[indexPath.row]
+        return myCell
     }
-
-
+ 
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return myArray.count
+    }
+    
 }
 
