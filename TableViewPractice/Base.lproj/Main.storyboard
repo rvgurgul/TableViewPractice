@@ -62,6 +62,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9gN-gT-KKW">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="pxw-eF-Id4">
+                            <connections>
+                                <action selector="editSuperheroes:" destination="BYZ-38-t0r" id="Raw-RK-tz6"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8Dm-1G-Ycl">
                             <connections>
                                 <action selector="addSuperhero:" destination="BYZ-38-t0r" id="Fh3-mW-ppm"/>
@@ -69,6 +74,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="myEditButton" destination="pxw-eF-Id4" id="6X8-GO-2m3"/>
                         <outlet property="myTableView" destination="Hf0-MK-dIB" id="LNf-ik-cDO"/>
                     </connections>
                 </viewController>

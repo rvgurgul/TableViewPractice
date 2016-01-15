@@ -14,6 +14,7 @@
 		3F453A1E1C46ACF6005BF86D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F453A1C1C46ACF6005BF86D /* LaunchScreen.storyboard */; };
 		3F453A291C46ACF9005BF86D /* TableViewPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F453A281C46ACF9005BF86D /* TableViewPracticeTests.swift */; };
 		3F453A341C46ACF9005BF86D /* TableViewPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F453A331C46ACF9005BF86D /* TableViewPracticeUITests.swift */; };
+		3F453A421C4956C5005BF86D /* Superhero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F453A411C4956C5005BF86D /* Superhero.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		3F453A2F1C46ACF9005BF86D /* TableViewPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F453A331C46ACF9005BF86D /* TableViewPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewPracticeUITests.swift; sourceTree = "<group>"; };
 		3F453A351C46ACF9005BF86D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F453A411C4956C5005BF86D /* Superhero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Superhero.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				3F453A131C46ACF6005BF86D /* AppDelegate.swift */,
 				3F453A151C46ACF6005BF86D /* ViewController.swift */,
+				3F453A411C4956C5005BF86D /* Superhero.swift */,
 				3F453A171C46ACF6005BF86D /* Main.storyboard */,
 				3F453A1A1C46ACF6005BF86D /* Assets.xcassets */,
 				3F453A1C1C46ACF6005BF86D /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			files = (
 				3F453A161C46ACF6005BF86D /* ViewController.swift in Sources */,
 				3F453A141C46ACF6005BF86D /* AppDelegate.swift in Sources */,
+				3F453A421C4956C5005BF86D /* Superhero.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

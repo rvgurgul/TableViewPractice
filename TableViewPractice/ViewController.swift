@@ -11,9 +11,12 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
     @IBOutlet weak var myTableView: UITableView!
+    @IBOutlet weak var myEditButton: UIBarButtonItem!
     
     var superheroes = ["Batman", "Superman", "Aquaman", "Iron Man", "The Flash", "Spiderman"]
     var realNames = ["Bruce Wayne", "Clark Kent", "Arthur Curry", "Tony Stark", "Barry Allen", "Peter Parker"]
+    
+    var heroes = [Superhero]()
     
     override func viewDidLoad()
     {
@@ -21,6 +24,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         myTableView.dataSource = self
         myTableView.delegate = self
+        
+        myEditButton.tag = 0
+    }
+    
+    @IBAction func editSuperheroes(sender: UIBarButtonItem)
+    {
+        if sender.tag == 0
+        {
+            myTableView.editing = true
+            myEditButton.tag = 1
+        }
+        else
+        {
+            myTableView.editing = false
+            myEditButton.tag = 0
+        }
     }
     
     @IBAction func addSuperhero(sender: UIBarButtonItem)
@@ -76,5 +95,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             myTableView.reloadData()
         }
     }
+    
+    func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool
+    {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath)
+    {
+        superheroes.insert(superheroes.removeAtIndex(sourceIndexPath.row), atIndex: destinationIndexPath.row)
+        realNames.insert(realNames.removeAtIndex(sourceIndexPath.row), atIndex: destinationIndexPath.row)
+    }
+    
 }
+
+
+
+
+
+
 
